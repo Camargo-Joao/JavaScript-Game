@@ -1,0 +1,19 @@
+.controles {
+    display: grid;
+    grid-template-columns: 20% 20%;
+    padding: 2rem 2rem 100% 2rem;
+    width: 100%;
+    justify-content: center;
+    color: aliceblue;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.controles div {
+    justify-items: center;
+}
+
+.setinhas {
+    width: 100px;
+    height: 100px;
+}
