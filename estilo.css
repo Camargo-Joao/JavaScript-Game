@@ -14,7 +14,6 @@ body{
     margin: 0;
     filter: drop-shadow(0 0 15px white);  
     bottom: 50px;  
-    
 }
 #caldeirao{
     position: absolute;
@@ -26,6 +25,15 @@ body{
     bottom: 50px;  
     
 }
+#esqueleto{
+    position: absolute;
+    width: 90px;
+    height: 132px;
+    margin: 0;
+    left: 900px;
+    filter: drop-shadow(0 0 15px rgb(253, 74, 74));  
+    bottom: 50px;  
+}
 #casa{
     position: absolute;
     width: 500px;
@@ -34,7 +42,6 @@ body{
     left: 300px;
     filter: drop-shadow(0 0 8px rgb(253, 74, 226));  
     bottom: 7%;  
-    
 }
 #arvore{
     position: absolute;
@@ -42,9 +49,7 @@ body{
     height: 320px;
     margin: 0;
     left: -600px;
-    
     bottom: 7%;  
-    
 }
 .tela{
     width: 1200px;
@@ -75,6 +80,19 @@ body{
     height: 80px;
     border: none;
     bottom: 0;
+}
+.img_left{
+    background: url("https://cdna.artstation.com/p/assets/images/images/020/960/014/original/gabriel-smolski-samurai-idle.gif?1569850569");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    border: none;
+    bottom: 0;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 .special1{
     filter: drop-shadow(0 0 10px rgb(231, 255, 14)); 
@@ -114,6 +132,18 @@ body{
     height: 80px;
     border: none;
 }
+.walk_left{
+    background: url("https://cdnb.artstation.com/p/assets/images/images/020/960/021/original/gabriel-smolski-samurai-run1.gif?1569850584");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    border: none;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
 .atacar{
     background: url("https://cdnb.artstation.com/p/assets/images/images/020/960/019/original/gabriel-smolski-samurai-enter1.gif?1569871499");
     background-size: 100%;
@@ -125,10 +155,19 @@ body{
 .fumaca{
     background: url("https://img.itch.zone/aW1nLzQ0Mjk1NzIuZ2lm/original/yrsV%2Bf.gif");
     background-size: 100%;
+    width: 80px;
+    height: 200px;
+    border: none;
+    margin-top: 100%;
+}
+.chama{
+    background: url("https://cdn.pixabay.com/animation/2024/06/23/05/08/05-08-33-791_512.gif");
+    background-size: 100%;
     background-repeat: no-repeat;
     width: 80px;
-    height: 150px;
+    height: 300px;
     border: none;
+    margin-top: 100%;
 }
 
 .pulo{
@@ -160,6 +199,15 @@ body{
     bottom: 0;
     border: none;
 }
+/*esqueleto*/
+.esqueleto{
+    background: url("https://img.itch.zone/aW1nLzIxODY1MTMuZ2lm/original/VIGEEd.gif");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    bottom: 100px;
+    border: none;
+}
 /*casa*/
 .imgf{
     background: url("pngwing.com.png");
@@ -174,7 +222,7 @@ body{
 .imga{
     background: url("ar.png");
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     margin: 0;
     border: none;
     width: 2499px;
@@ -182,4 +230,8 @@ body{
     margin: 0;
 }
 
+/*Interações*/
+.morrer {
+    display: none;
+}
 

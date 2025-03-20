@@ -3,6 +3,7 @@
 var andar = document.getElementById("object")
 var mario = document.querySelector(".img")
 var caldeirao = document.getElementById("caldeirao")
+var esqueleto = document.getElementById("esqueleto")
 var casa = document.getElementById("casa")
 var arvore = document.getElementById("arvore")
 var chao = document.getElementById("chao")
@@ -19,57 +20,52 @@ window.addEventListener("keydown", function(event){
     if(tecla == "39" && x >=0 && x<950){
         x=x+10
         andar.style.left=x+"px"
+        mario.classList.remove("img_left")
+        mario.classList.add("img")
         mario.classList.add("walk")
-
     }
     if(tecla == "37" && x >0 && x<=950){
         x=x-10
         andar.style.left=x+"px"
+        mario.classList.remove("img")
+        mario.classList.add("img_left")
         mario.classList.add("walk")
     }
     //caldeirao
     if(tecla=="39" && x == 950){
         y=y-10
         caldeirao.style.left=y+"px"
-        mario.classList.add("walk")
     }
     if(tecla=="37" && x == 0 ){
         y=y+10
         caldeirao.style.left=y+"px"
-        mario.classList.add("walk")
     }
     //casa
     if(tecla=="39" && x == 950){
         z=z-3
         casa.style.left=z+"px"
-        mario.classList.add("walk")
     }
     if(tecla=="37" && x == 0 ){
         z=z+3
         casa.style.left=z+"px"
-        mario.classList.add("walk")
     }
     //arvores
     if(tecla=="39" && x == 950){
         a=a-0.5
         arvore.style.left=a+"px"
-        mario.classList.add("walk")
     }
     if(tecla=="37" && x == 0 ){
         a=a+0.5
         arvore.style.left=a+"px"
-        mario.classList.add("walk")
     }
     //chao
     if(tecla=="39" && x == 950){
         c=c-1
         chao.style.left=c+"px"
-        mario.classList.add("walk")
     }
     if(tecla=="37" && x == 0 ){
         c=c+1
         chao.style.left=c+"px"
-        mario.classList.add("walk")
     }
     //habilidades
     if(tecla == "83"){
@@ -112,18 +108,34 @@ window.addEventListener("keydown", function(event){
         mario.classList.remove("special2")
         mario.classList.remove("special3")
     }
+
+    //interações 
+    if(tecla == "65" && x>=820 && x<=920){ 
+        this.setTimeout(function(){
+            esqueleto.classList.add("fumaca")
+            this.setTimeout(function(){
+                esqueleto.classList.add("morrer")
+            },500)                    
+        }, 1000)
+    }
+    console.log(x)
 })
 
 
 //soltar teclas
 window.addEventListener("keyup", function(event){
     var tecla= event.keyCode
-    if(tecla == "39"||tecla == "38"||tecla == "40"||tecla == "37"){
-       mario.classList.remove("walk")
-        mario.setAttribute("class","img") 
+    if(tecla == "39"){
+       
+       mario.setAttribute("class","img") 
     }
+    if(tecla == "37"){
+      
+         mario.setAttribute("class","img_left") 
+     }
     
 })
+
 
 
 
